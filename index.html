@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SusAlert Updated</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/tracker.css">
+
+  <!-- Official Alt1 browser libraries. No original SusAlert site is contacted. -->
+  <script src="./vendor/alt1/base.js"></script>
+  <script src="./vendor/alt1/ocr.js"></script>
+  <script src="./vendor/alt1/chatbox.js"></script>
+  <script src="./vendor/alt1/buffs.js"></script>
+  <script src="./vendor/alt1/bosstimer.js"></script>
+</head>
+<body class="body" id="body">
+  <main class="container">
+    <div class="row">
+      <div class="col">
+        <div id="timerBox" class="nistext h6">00:00</div>
+        <div id="minusButton" title="Reduce the timer by one second" role="button" tabindex="0" class="nissmallimagebutton">-</div>
+        <div id="plusButton" title="Increase the timer by one second" role="button" tabindex="0" class="nissmallimagebutton">+</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div id="settingsButton" title="Settings" role="button" tabindex="0" class="nissmallimagebutton float-right" onclick="window.open('./settings.html', '_blank', 'height=680,width=440,status=yes,toolbar=no,menubar=no,location=no,addressbar=no');"></div>
+        <div id="infoButton" title="Information" role="button" tabindex="0" class="nissmallimagebutton float-right" onclick="window.open('./info.html', '_blank', 'height=620,width=460,status=yes,toolbar=no,menubar=no,location=no,addressbar=no');"></div>
+        <div id="debugButton" title="Debug encounter toggle" role="button" tabindex="0" class="nissmallimagebutton float-right d-none">~</div>
+        <img id="cMaskImage" src="./assets/crystalmask.png" alt="Crystal Mask active" title="Crystal Mask is active: you are protected from Croesus attacks" class="d-none">
+      </div>
+    </div>
+
+    <div id="resizeNotice" class="d-none" role="status">Resize the Alt1 window vertically until all enabled panels are visible.</div>
+
+    <div class="row">
+      <div id="upcomingBox" class="nistext"></div>
+    </div>
+
+    <div class="row">
+      <div id="incomingBox" class="nistext font-weight-bold h5">Loading SusAlert...</div>
+    </div>
+    <div class="row">
+      <button id="recalButton" title="Synchronise the boss timer. Keyboard shortcut: Alt+1" type="button" class="nisbutton d-none">Click when the middle fungus dies</button>
+    </div>
+
+    <section id="routeTrackerMount" aria-label="Croesus route tracker"></section>
+
+    <section id="statuesBox" class="d-none" aria-label="Statue status">
+      <div class="row"><div class="col statue-compass-title">North</div></div>
+      <div class="row">
+        <div><img id="VendiStatue" title="Vendi's statue (Hunter)" alt="Vendi statue status" src="./assets/statues/Vendi - algae-calcified.png" class="statue-size left-statues top-statues"></div>
+        <div><img id="OphalmiStatue" title="Ophalmi's statue (Fishing)" alt="Ophalmi statue status" src="./assets/statues/Ophalmi - calcified-timber.png" class="statue-size top-statues"></div>
+        <div><img id="SanaStatue" title="Sana's statue (Woodcutting)" alt="Sana statue status" src="./assets/statues/Sana - spores-algae.png" class="statue-size left-statues"></div>
+        <div><img id="TaggaStatue" title="Tagga's statue (Mining)" alt="Tagga statue status" src="./assets/statues/Tagga - timber-spores.png" class="statue-size"></div>
+      </div>
+      <div id="hrStatueDivider" class="hr statueDivider"></div>
+      <div id="vrStatueDivider" class="vr statueDivider"></div>
+    </section>
+  </main>
+
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/tracker-core.js"></script>
+  <script src="./scripts/tracker.js"></script>
+</body>
+</html>

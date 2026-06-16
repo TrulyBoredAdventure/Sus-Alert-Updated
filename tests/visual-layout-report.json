@@ -1,0 +1,1593 @@
+{
+  "summary": {
+    "widths": [
+      320,
+      350,
+      380,
+      400,
+      620
+    ],
+    "routeConfigurationsChecked": 190,
+    "renderedStepStatesChecked": 2030,
+    "collapsedViewsChecked": 5,
+    "problemCount": 0
+  },
+  "problems": [],
+  "results": [
+    {
+      "configurations": [
+        {
+          "party": "2",
+          "role": "duo-hw",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 970,
+          "problems": []
+        },
+        {
+          "party": "2",
+          "role": "duo-mf",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 970,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        }
+      ],
+      "collapsedCheck": {
+        "docWidth": 320,
+        "viewport": 320,
+        "bodyHeight": 97,
+        "problems": []
+      },
+      "width": 320
+    },
+    {
+      "configurations": [
+        {
+          "party": "2",
+          "role": "duo-hw",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 970,
+          "problems": []
+        },
+        {
+          "party": "2",
+          "role": "duo-mf",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 970,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 884,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 884,
+          "problems": []
+        }
+      ],
+      "collapsedCheck": {
+        "docWidth": 350,
+        "viewport": 350,
+        "bodyHeight": 97,
+        "problems": []
+      },
+      "width": 350
+    },
+    {
+      "configurations": [
+        {
+          "party": "2",
+          "role": "duo-hw",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 705,
+          "problems": []
+        },
+        {
+          "party": "2",
+          "role": "duo-mf",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 705,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        }
+      ],
+      "collapsedCheck": {
+        "docWidth": 380,
+        "viewport": 380,
+        "bodyHeight": 97,
+        "problems": []
+      },
+      "width": 380
+    },
+    {
+      "configurations": [
+        {
+          "party": "2",
+          "role": "duo-hw",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 676,
+          "problems": []
+        },
+        {
+          "party": "2",
+          "role": "duo-mf",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 676,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 621,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 621,
+          "problems": []
+        }
+      ],
+      "collapsedCheck": {
+        "docWidth": 400,
+        "viewport": 400,
+        "bodyHeight": 97,
+        "problems": []
+      },
+      "width": 400
+    },
+    {
+      "configurations": [
+        {
+          "party": "2",
+          "role": "duo-hw",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 659,
+          "problems": []
+        },
+        {
+          "party": "2",
+          "role": "duo-mf",
+          "rot": "duo-managed",
+          "stepsChecked": 17,
+          "maxBodyHeight": 659,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-hunter",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-woodcutting",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-mining",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "short",
+          "stepsChecked": 16,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "long",
+          "stepsChecked": 16,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "4",
+          "role": "four-fishing",
+          "rot": "none",
+          "stepsChecked": 13,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-hunter-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-woodcutting-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-mining-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "short",
+          "stepsChecked": 10,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "long",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-short",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "short",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "long",
+          "stepsChecked": 10,
+          "maxBodyHeight": 604,
+          "problems": []
+        },
+        {
+          "party": "8",
+          "role": "eight-fishing-long",
+          "rot": "none",
+          "stepsChecked": 7,
+          "maxBodyHeight": 604,
+          "problems": []
+        }
+      ],
+      "collapsedCheck": {
+        "docWidth": 620,
+        "viewport": 620,
+        "bodyHeight": 97,
+        "problems": []
+      },
+      "width": 620
+    }
+  ]
+}

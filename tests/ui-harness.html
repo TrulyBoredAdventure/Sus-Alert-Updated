@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SusAlert Tracker Visual Harness</title>
+  <style>
+    html, body { margin: 0; min-height: 100%; background: #202020; color: white; font-family: Arial, sans-serif; }
+    body { width: 100%; }
+    .nisbutton, .nissmallimagebutton { border: 1px solid #888; background: #333; color: white; }
+    .nissmallimagebutton { display: inline-block; }
+  </style>
+  <link rel="stylesheet" href="../css/tracker.css">
+</head>
+<body>
+  <section id="routeTrackerMount"></section>
+  <script>
+    window.startEncounter = function (offset) { document.body.dataset.startOffset = String(offset || 0); };
+    window.stopEncounter = function () { document.body.dataset.stopped = "true"; };
+  </script>
+  <script src="../scripts/tracker-core.js"></script>
+  <script src="../scripts/tracker.js"></script>
+</body>
+</html>

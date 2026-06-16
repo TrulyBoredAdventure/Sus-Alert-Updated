@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SusAlert Updated Settings</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="nis body settings-page">
+  <h1>SusAlert settings</h1>
+  <div class="settings-grid">
+    <label for="chatSelect">Selected chat box</label>
+    <select id="chatSelect"></select>
+
+    <label for="tooltipSelect">Cursor tooltip</label>
+    <select id="tooltipSelect">
+      <option value="0">Disabled</option>
+      <option value="1">Attack only</option>
+      <option value="2">Hint only</option>
+      <option value="3">Attack and hint</option>
+    </select>
+
+    <label for="styleSelect">Countdown text style</label>
+    <select id="styleSelect">
+      <option value="0">Default white</option>
+      <option value="1">Colourful</option>
+      <option value="2">Colourful, inverted</option>
+    </select>
+
+    <label for="countdownSoundSelect">Countdown sound</label>
+    <select id="countdownSoundSelect">
+      <option value="0">Disabled</option>
+      <option value="1">Beep</option>
+      <option value="2">Race countdown</option>
+      <option value="3">Soft beep</option>
+      <option value="4">Xylophone</option>
+      <option value="69">Warning</option>
+    </select>
+
+    <div class="settings-section-title">Interface</div>
+
+    <label for="compactModeSelect">Compact mode</label>
+    <select id="compactModeSelect">
+      <option value="1">Disabled</option>
+      <option value="0">Enabled</option>
+    </select>
+
+    <label for="extendedModeSelect">Statue indicator</label>
+    <select id="extendedModeSelect">
+      <option value="1">Disabled</option>
+      <option value="0">Enabled</option>
+    </select>
+
+    <label for="crystalMaskSelect">Crystal Mask indicator</label>
+    <select id="crystalMaskSelect">
+      <option value="0">Disabled</option>
+      <option value="1">Enabled</option>
+    </select>
+
+    <div class="setting-row"><label for="crystalMaskBorderSelect">Crystal Mask border</label></div>
+    <div class="setting-row">
+      <select id="crystalMaskBorderSelect">
+        <option value="0">Disabled</option>
+        <option value="1">Green and red</option>
+        <option value="2">Blue and red</option>
+        <option value="3">Blue and yellow</option>
+        <option value="4">Blue and white</option>
+        <option value="5">White and red</option>
+      </select>
+    </div>
+
+    <div class="setting-row"><label for="crystalMaskSoundSelect">Crystal Mask sound</label></div>
+    <div class="setting-row">
+      <select id="crystalMaskSoundSelect">
+        <option value="0">Disabled</option>
+        <option value="1">Shatter 1</option>
+        <option value="2">Shatter 2</option>
+        <option value="3">Bell</option>
+        <option value="4">Spell</option>
+        <option value="5">Damage</option>
+        <option value="6">Fireball</option>
+        <option value="7">Alert</option>
+        <option value="69">Warning</option>
+      </select>
+    </div>
+
+    <div class="settings-section-title">Timing</div>
+
+    <label for="startDelayInput">Start delay in milliseconds</label>
+    <input id="startDelayInput" type="number" min="0" max="2000" step="1">
+
+    <label for="endDelayInput">End check time in ticks</label>
+    <input id="endDelayInput" type="number" min="6" max="20" step="1">
+
+    <label for="midDelayInput">Delay after the middle fungus in seconds</label>
+    <input id="midDelayInput" type="number" min="5" max="25" step="1">
+  </div>
+
+  <p class="settings-note">Changes are saved locally. Keep this window open from the main SusAlert window so changes can be applied immediately.</p>
+  <script src="./scripts/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "appName": "SusAlert Updated Statues Compact",
+  "description": "Standalone read-only Croesus attack alerts, party routes, materials, rotten fungus, and destination guidance.",
+  "appUrl": "./index.html",
+  "iconUrl": "./assets/favicon.png",
+  "requestHandlers": [],
+  "activators": [],
+  "permissions": "pixel,gamestate,overlay",
+  "configUrl": "./appconfig_statues_compact.json",
+  "defaultWidth": 400,
+  "defaultHeight": 850,
+  "minWidth": 320,
+  "minHeight": 220,
+  "maxWidth": 620,
+  "maxHeight": 1100
+}

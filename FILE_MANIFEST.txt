@@ -1,0 +1,77 @@
+.github/workflows/verify.yml
+.gitignore
+.nojekyll
+CHANGELOG.md
+FULL_REPO_UPLOAD.md
+LICENSE
+NOTICE.md
+README.md
+THIRD_PARTY_NOTICES.md
+VERSION.txt
+appconfig.json
+appconfig_compact.json
+appconfig_statues.json
+appconfig_statues_compact.json
+assets/alert.mp3
+assets/banner.png
+assets/beep.mp3
+assets/beeps.mp3
+assets/bell.mp3
+assets/crystalmask.png
+assets/damage.mp3
+assets/favicon.png
+assets/fireball.mp3
+assets/infobutton.png
+assets/race1.mp3
+assets/race2.mp3
+assets/settingsbutton.png
+assets/shatter.mp3
+assets/shatter2.mp3
+assets/softbeep.mp3
+assets/softendbeep.mp3
+assets/spell.mp3
+assets/statues/Ophalmi - calcified-timber - built.png
+assets/statues/Ophalmi - calcified-timber - complete.png
+assets/statues/Ophalmi - calcified-timber.png
+assets/statues/Sana - spores-algae - built.png
+assets/statues/Sana - spores-algae - complete.png
+assets/statues/Sana - spores-algae.png
+assets/statues/Tagga - timber-spores - built.png
+assets/statues/Tagga - timber-spores - complete.png
+assets/statues/Tagga - timber-spores.png
+assets/statues/Vendi - algae-calcified - built.png
+assets/statues/Vendi - algae-calcified - complete.png
+assets/statues/Vendi - algae-calcified.png
+assets/warningend.mp3
+assets/xylo.mp3
+assets/xyloend.mp3
+css/style.css
+css/tracker.css
+docs/AUDIT_REPORT.md
+docs/RELEASE_NOTES.md
+docs/STANDALONE_AUDIT.md
+docs/TEST_REPORT.md
+docs/alt1-jagex-compliance.md
+docs/route-tracker.md
+index.html
+info.html
+package.json
+scripts/script.js
+scripts/settings.js
+scripts/tracker-core.js
+scripts/tracker.js
+settings.html
+tests/encounter-module.test.js
+tests/standalone-runtime.test.js
+tests/tracker-core.test.js
+tests/tracker-integration.test.js
+tests/ui-harness.html
+tests/visual-layout-report.json
+tools/verify-update.js
+vendor/alt1/README.md
+vendor/alt1/base.js
+vendor/alt1/bosstimer.js
+vendor/alt1/buffs.js
+vendor/alt1/chatbox.js
+vendor/alt1/ocr.js
+vendor/alt1/package.json

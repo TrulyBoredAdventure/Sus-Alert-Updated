@@ -1,0 +1,15 @@
+{
+  "name": "susalert-updated",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Standalone read-only Alt1 overlay for Croesus attack alerts and party route tracking.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "verify": "node tools/verify-update.js",
+    "check": "node tools/verify-update.js && node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

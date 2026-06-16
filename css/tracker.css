@@ -1,0 +1,390 @@
+#routeTrackerMount,
+#routeTrackerMount * {
+  box-sizing: border-box;
+}
+
+#routeTrackerMount {
+  width: calc(100% - 14px);
+  margin: 6px 7px 8px;
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.route-tracker {
+  width: 100%;
+  border: 1px solid #777;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.route-tracker-header {
+  display: flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 6px 5px 8px;
+  border-bottom: 1px solid #666;
+  background: rgba(20, 20, 20, 0.84);
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.route-tracker-header > div {
+  min-width: 0;
+}
+
+.route-tracker-collapsed .route-tracker-header {
+  border-bottom: 0;
+}
+
+.route-collapse {
+  width: 26px;
+  min-width: 26px;
+  height: 24px;
+  padding: 0;
+  flex: 0 0 26px;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.route-status {
+  display: inline;
+  margin-left: 4px;
+  color: #c6c6c6;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.route-status-active {
+  color: #9bea9b;
+}
+
+.route-tracker-body {
+  padding: 7px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.route-settings {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 6px;
+}
+
+.route-setting-role {
+  grid-column: 1 / -1;
+}
+
+.route-settings label {
+  display: block;
+  min-width: 0;
+  margin: 0;
+  color: #d0d0d0;
+  font-size: 10px;
+  line-height: 1.25;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+}
+
+.route-settings select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 31px;
+  margin-top: 3px;
+  padding: 3px 6px;
+  border: 1px solid #777;
+  border-radius: 0;
+  background: #181818;
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.route-settings select:disabled {
+  opacity: 0.62;
+}
+
+.route-help,
+.route-notice,
+.route-recovery {
+  margin-top: 7px;
+  padding: 6px 7px;
+  border: 1px solid #806d35;
+  background: rgba(111, 88, 24, 0.3);
+  color: #f2dfa2;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+
+.route-recovery {
+  display: block;
+  margin: 6px 0 0;
+  font-size: 11px;
+}
+
+.route-recovery button {
+  display: block;
+  margin-top: 6px;
+}
+
+.route-location-grid,
+.route-counter-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 6px;
+  margin-top: 7px;
+}
+
+.route-location-grid > div,
+.route-counter,
+.route-step,
+.route-totals {
+  border: 1px solid #555;
+  background: rgba(0, 0, 0, 0.36);
+}
+
+.route-location-grid > div {
+  min-width: 0;
+  padding: 6px 7px;
+}
+
+.route-location-grid strong {
+  display: block;
+  min-width: 0;
+  margin-top: 2px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.route-eyebrow,
+.route-counter-label {
+  display: block;
+  color: #b9b9b9;
+  font-size: 10px;
+  line-height: 1.25;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.route-counter {
+  min-width: 0;
+  padding: 6px;
+}
+
+.route-counter-controls {
+  display: grid;
+  grid-template-columns: 28px minmax(34px, 1fr) 28px;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.route-counter-button {
+  width: 28px;
+  min-width: 28px;
+  height: 27px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.route-counter-value {
+  min-width: 0;
+  height: 27px;
+  border: 1px solid #666;
+  background: #0d0d0d;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+}
+
+.route-inline-actions {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  margin-top: 7px;
+  color: #d2d2d2;
+  font-size: 11px;
+}
+
+.route-inline-actions span {
+  min-width: 0;
+  text-align: right;
+  overflow-wrap: break-word;
+}
+
+.route-small-button,
+.route-step-actions .nisbutton {
+  height: auto;
+  min-height: 30px;
+  padding: 4px 8px;
+  font-size: 11px;
+  line-height: 1.25;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.route-totals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 7px;
+  padding: 0;
+  text-align: center;
+}
+
+.route-totals span {
+  min-width: 0;
+  padding: 6px 4px;
+  border-right: 1px solid #444;
+  color: #d0d0d0;
+  font-size: 10px;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+}
+
+.route-totals span:last-child {
+  border-right: 0;
+}
+
+.route-totals b {
+  display: block;
+  margin-bottom: 2px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.route-step {
+  margin-top: 7px;
+  padding: 7px;
+}
+
+.route-step h3 {
+  margin: 3px 0 5px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+.route-step p {
+  min-height: 0;
+  margin: 0;
+  color: #e6e6e6;
+  font-size: 12px;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+}
+
+.route-step-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 6px;
+  margin-top: 7px;
+}
+
+.route-step-actions .nisbutton {
+  width: 100%;
+  min-width: 0;
+}
+
+.route-footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 8px;
+  margin-top: 7px;
+  color: #b8b8b8;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.route-footer span {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.route-collapsed-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
+  padding: 6px 8px;
+  color: #dedede;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.route-collapsed-summary span {
+  min-width: 0;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.route-collapsed-summary span:last-child {
+  color: #fff;
+  text-align: left;
+}
+
+.route-tracker button:disabled {
+  cursor: default;
+  opacity: 0.48;
+}
+
+@media (max-width: 350px) {
+  .route-settings,
+  .route-location-grid,
+  .route-counter-grid,
+  .route-step-actions,
+  .route-inline-actions,
+  .route-footer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .route-setting-role {
+    grid-column: auto;
+  }
+
+  .route-inline-actions span {
+    text-align: left;
+  }
+
+  .route-footer .route-small-button {
+    width: 100%;
+  }
+
+  .route-totals {
+    grid-template-columns: minmax(0, 1fr);
+    text-align: left;
+  }
+
+  .route-totals span {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    align-items: center;
+    gap: 5px;
+    border-right: 0;
+    border-bottom: 1px solid #444;
+  }
+
+  .route-totals span:last-child {
+    border-bottom: 0;
+  }
+
+  .route-totals b {
+    margin: 0;
+    text-align: center;
+  }
+}
