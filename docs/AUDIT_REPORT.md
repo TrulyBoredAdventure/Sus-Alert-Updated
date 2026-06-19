@@ -1,48 +1,35 @@
-# Audit Report
+# Audit Report - 1.3.1
 
-## Scope
+## End-user README
 
-The audit reviewed repository completeness, standalone runtime behavior, local references, application identity, visible text, next-special timing, movable-overlay controls, route generation, read-only boundaries, persistence, reset handling, and tests.
+The README now focuses on installing and using the Alt1 app. Maintainer upload, development, test-command, and repository-structure sections were removed. It includes:
 
-## Standalone result
+- Direct Alt1 installation link.
+- Requirements and first-use guidance.
+- Encounter and route tracker instructions.
+- Overlay setup and location instructions.
+- Troubleshooting.
+- Privacy and read-only boundaries.
+- Original SusAlert credit and MIT licensing.
+- A preview image of the next-special overlay.
 
-- No `scripts/legacy-loader.js` file.
-- No runtime reference to `raphire.github.io`.
-- No runtime reference to `raw.githubusercontent.com/Raphire`.
-- No runtime reference to the original GitHub repository.
-- No runtime Alt1 CDN script reference.
-- Alt1 reader scripts are stored in `vendor/alt1/`.
-- Application images and sounds use local relative paths.
-- The old network-loader error message is absent.
+## Settings overlay controls
 
-## Next-special overlay result
+The settings page includes:
 
-- Displays a compact ASCII pictogram, special name, and remaining seconds.
-- Uses the encounter module's existing timer, pause, nudge, cycle, and resynchronisation state.
-- Stores visibility, size, and RuneScape-relative coordinates locally.
-- Provides Move, Set, Cancel, Preview, and Reset controls.
-- Clamps the overlay inside the RuneScape client.
-- Uses no external image or script dependency.
-- Sends no mouse or keyboard input.
+- An always-visible display preview.
+- Small, medium, and large size preview states.
+- X and Y location inputs.
+- Save control for exact coordinates.
+- Move and Set pointer placement.
+- Live coordinate feedback while moving.
+- Show in game sample control.
+- Reset and Cancel controls.
 
-## Identity result
+## Runtime integration
 
-All four application configurations use a `SusAlert Updated` display name, local `index.html`, and local `assets/favicon.png`.
+The main page now loads the local overlay controller after the encounter module and before the route tracker. No original SusAlert GitHub or CDN runtime call is used.
 
-The main, settings, and information pages include descriptive HTML titles and the local icon.
+## Read-only review
 
-## Text and layout result
-
-The route tracker CSS permits wrapping and visible overflow for user-facing labels. Ellipsis clipping is not used for route buttons or destination text. Runtime text contains no Unicode replacement characters. Overlay widths include conservative space for every special name at each supported size.
-
-## Read-only result
-
-Project scripts do not call mouse, keyboard, click, or input-sending Alt1 functions. Overlay placement reads pointer coordinates only. Project scripts do not evaluate downloaded code or make project-level network requests. Alt1's vendored base library uses the internal `https://alt1api/...` capture bridge when running inside Alt1.
-
-## Attribution result
-
-The original MIT copyright and permission notice remain in `LICENSE`. Original SusAlert, ZeroGwafa, and Skillbert credit is retained in the README, notice, information page, and third-party notice.
-
-## Remaining acceptance work
-
-Live Alt1 testing is still required because automated tests cannot reproduce the RuneScape boss timer, chat box, buff bar, game scaling, transparency, multi-monitor coordinates, or Alt1's final overlay font rendering.
+Project scripts were checked for network requests, dynamic code execution, and Alt1 input-sending calls. None were found. Overlay placement reads the current pointer position but does not move or click it.

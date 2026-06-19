@@ -1,10 +1,11 @@
-SusAlert Updated 1.3.0 file manifest
+SusAlert Updated 1.3.1 file manifest
 Generated for the standalone repository release.
 
 .github/workflows/verify.yml
 .gitignore
 .nojekyll
 CHANGELOG.md
+FILE_MANIFEST.txt
 FULL_REPO_UPLOAD.md
 LICENSE
 NOTICE.md
@@ -25,6 +26,7 @@ assets/damage.mp3
 assets/favicon.png
 assets/fireball.mp3
 assets/infobutton.png
+assets/overlay-preview.png
 assets/race1.mp3
 assets/race2.mp3
 assets/settingsbutton.png

@@ -70,3 +70,12 @@ test('browser overlay placement previews and saves the selected position', () =>
   assert.equal(storage.get('susSpecialOverlayX'), '288');
   assert.equal(storage.get('susSpecialOverlayY'), '208');
 });
+
+test('browser overlay accepts an exact saved location', () => {
+  const { window, storage } = loadOverlay();
+  const saved = window.setSpecialOverlayPosition({ x: 444, y: 333 });
+  assert.equal(saved.x, 444);
+  assert.equal(saved.y, 333);
+  assert.equal(storage.get('susSpecialOverlayX'), '444');
+  assert.equal(storage.get('susSpecialOverlayY'), '333');
+});

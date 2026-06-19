@@ -1,20 +1,40 @@
 # Next-Special Overlay
 
-The next-special overlay is drawn directly over the RuneScape client through Alt1's overlay API. It displays:
+The next-special overlay is drawn over the RuneScape client through Alt1. It shows:
 
-- One compact ASCII pictogram.
-- The next Croesus special name.
-- Remaining seconds.
+- A compact special icon.
+- The next Croesus special.
+- The remaining seconds.
 
-## Positioning
+## Display preview
 
-Open settings and select `Move`. The overlay follows the pointer inside RuneScape. Move the pointer to the desired location, return to settings, and select `Set`. The saved coordinates are relative to the RuneScape client, not the desktop, so the overlay remains aligned when the game window moves.
+Open SusAlert settings and find the Game overlay section. The Display preview changes immediately when Small, Medium, or Large is selected. It shows the same layout used by the in-game overlay.
 
-`Preview` displays a six-second example. `Reset` restores the default position. `Cancel` exits placement without changing the saved position.
+Select `Show in game` to display a six-second sample at the saved location.
+
+## Set the location
+
+### Pointer placement
+
+1. Select `Move`.
+2. Move the pointer to the preferred position inside RuneScape.
+3. Return to settings.
+4. Select `Set`.
+
+Select `Cancel` to keep the previous location.
+
+### Exact coordinates
+
+Enter X and Y under Location in game, then select `Save`.
+
+- X is measured from the left edge of the RuneScape client.
+- Y is measured from the top edge of the RuneScape client.
+
+The location is clamped inside the RuneScape client. Select `Reset` to restore the default position.
 
 ## Timing
 
-The overlay reads the same encounter state as the main SusAlert panel. It accounts for:
+The overlay uses the same encounter state as the main SusAlert panel. It accounts for:
 
 - Automatic encounter start and reset.
 - Core attack-phase pauses.
@@ -24,4 +44,4 @@ The overlay reads the same encounter state as the main SusAlert panel. It accoun
 
 ## Read-only operation
 
-During placement, the app reads Alt1's current pointer position in the RuneScape client. It does not send mouse or keyboard input.
+During pointer placement, the app reads Alt1's current pointer position inside RuneScape. It does not send mouse or keyboard input.

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SusAlert Updated Settings</title>
   <link rel="icon" type="image/png" href="./assets/favicon.png">
-  
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="nis body settings-page">
@@ -119,13 +118,35 @@
       </select>
     </div>
 
+    <section class="overlay-preview-section" aria-labelledby="specialOverlayPreviewHeading">
+      <div id="specialOverlayPreviewHeading" class="overlay-preview-heading">Display preview</div>
+      <div class="overlay-preview-stage">
+        <div id="specialOverlayPreview" class="special-overlay-preview size-medium" aria-label="Sample next-special overlay">
+          <span class="special-overlay-preview-icon" aria-hidden="true">*</span>
+          <span class="special-overlay-preview-copy">
+            <span class="special-overlay-preview-name">Red bomb</span>
+            <strong class="special-overlay-preview-count">12</strong>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay-location-heading">Location in game</div>
+    <div class="overlay-location-grid">
+      <label for="specialOverlayXInput">X</label>
+      <input id="specialOverlayXInput" type="number" min="0" max="4096" step="1" inputmode="numeric">
+      <label for="specialOverlayYInput">Y</label>
+      <input id="specialOverlayYInput" type="number" min="0" max="2160" step="1" inputmode="numeric">
+      <button id="saveSpecialOverlayPositionButton" type="button" class="nisbutton">Save</button>
+    </div>
+
     <div class="overlay-setting-actions" aria-label="Next special overlay controls">
       <button id="moveSpecialOverlayButton" type="button" class="nisbutton">Move</button>
-      <button id="previewSpecialOverlayButton" type="button" class="nisbutton">Preview</button>
+      <button id="previewSpecialOverlayButton" type="button" class="nisbutton">Show in game</button>
       <button id="resetSpecialOverlayButton" type="button" class="nisbutton">Reset</button>
       <button id="cancelSpecialOverlayButton" type="button" class="nisbutton d-none">Cancel</button>
     </div>
-    <div id="specialOverlayStatus" class="overlay-setting-status" role="status">Move, position, then Set.</div>
+    <div id="specialOverlayStatus" class="overlay-setting-status" role="status">Location: X 24, Y 118.</div>
 
     <div class="settings-section-title">Timing</div>
 
@@ -145,7 +166,7 @@
     </div>
   </div>
 
-  <p class="settings-note">Changes are saved locally. Keep this window open from the main SusAlert window so changes can be applied immediately.</p>
+  <p class="settings-note">Changes are saved on this device. Open settings from the main SusAlert window to use the in-game preview and pointer placement.</p>
   <script src="./scripts/settings.js"></script>
 </body>
 </html>

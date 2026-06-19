@@ -1,14 +1,14 @@
 # Changelog
 
-## 1.3.0
+## 1.3.1
 
-- Added a movable in-game overlay for the next Croesus special and countdown.
-- Added compact ASCII pictograms and urgency colours.
-- Added small, medium, and large overlay sizes.
-- Added Move, Preview, Reset, and Cancel controls in settings.
-- Saved overlay visibility, size, and RuneScape-relative position locally.
-- Integrated the overlay with encounter start, reset, core pauses, timer nudges, and middle-fungus resynchronisation.
-- Added timing, drawing, placement, and configuration tests.
+- Rewrote the README for app users rather than repository maintainers.
+- Added an embedded next-special overlay preview to settings.
+- Added direct X and Y location entry with a Save control.
+- Added live coordinate feedback during pointer placement.
+- Added a README overlay preview image.
+- Corrected the main runtime script list to load `scripts/special-overlay.js` locally.
+- Added direct-position tests and repository checks.
 
 ## 1.2.0
 

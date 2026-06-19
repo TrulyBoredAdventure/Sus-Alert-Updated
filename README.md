@@ -1,139 +1,163 @@
 # SusAlert Updated
 
-SusAlert Updated is a standalone, read-only Alt1 Toolkit application for the Croesus encounter in RuneScape 3. It preserves the encounter alert workflow associated with SusAlert and adds party route guidance, a movable in-game next-special countdown, material tracking, rotten fungus tracking, local persistence, reset integration, and interrupted-run recovery.
+SusAlert Updated is a standalone Alt1 Toolkit app for the Croesus encounter in RuneScape 3. It provides encounter alerts, a movable next-special countdown, party route guidance, material tracking, rotten fungus tracking, and local run recovery.
 
-All SusAlert-specific runtime scripts, images, sounds, and Alt1 reader bundles needed by this repository are stored locally. The application does not download or evaluate code from the original SusAlert GitHub Pages deployment.
+The app is read-only. It displays information and does not perform actions in RuneScape.
 
-## Features
+## Install
 
-### Encounter overlay
+Alt1 Toolkit must already be installed.
 
-- Automatic detection of the Croesus boss timer.
-- Automatic encounter start and end handling.
-- Croesus attack countdowns and visual instructions.
-- Movable in-game next-special overlay with a live countdown and compact ASCII pictograms.
-- Small, medium, and large overlay sizes.
-- Saved overlay position, visibility, and size.
-- Optional countdown sounds.
-- Manual timer adjustment.
-- Middle fungus timer resynchronisation.
-- Chat-based attack-phase detection.
-- Statue restoration status indicators.
-- Crystal Mask status and expiry alert support.
-- Standard, compact, statue, and compact-statue Alt1 configurations.
-
-### Party route tracker
-
-- Party sizes of 2, 4, or 8 players.
-- Roles appropriate to the selected team size.
-- Separate short-runner and long-runner roles for eight-player teams.
-- Material and rotten fungus counters with plus and minus controls.
-- Remaining gather, delivery, and rotten fungus totals.
-- Instructions for gathering, clearing, depositing, withdrawing, moving, poisoning, restoring, and praying.
-- Current plot and next destination display.
-- Rotten fungus responsibility selection for short runner, long runner, or neither.
-- Local saving of settings and route progress.
-- Recovery of a recently interrupted active encounter.
-- Collapsible route tracker panel.
-- Exact undo for the most recently completed route step.
-- Reset integration with SusAlert's encounter reset.
-
-## Standalone design
-
-The repository contains local copies of:
-
-- The SusAlert encounter module.
-- Route tracker scripts and styles.
-- Alt1 base, OCR, chatbox, buff, and boss-timer browser libraries.
-- The application icon and interface images.
-- Crystal Mask and statue recognition/display images.
-- Alert sound files.
-
-The app does not load scripts, styles, images, or sounds from `Raphire/SusAlert` or `raphire.github.io` at runtime. The project repository link on the information page is a normal user-clicked link and is not a runtime dependency.
-
-The Alt1 reader library may use Alt1's internal `https://alt1api/...` bridge while running inside Alt1. That is Alt1's local browser-to-toolkit interface, not a request to the original SusAlert website.
-
-## Requirements
-
-- Alt1 Toolkit.
-- RuneScape interface scaling set to 100 percent.
-- The boss timer visible and unobstructed.
-- Game messages enabled.
-- Chat text size of at least 12.
-- Local chat timestamps recommended.
-- Interface transparency set to 0 percent when statue indicators are used.
-
-## Installation
-
-Enable GitHub Pages for this repository:
-
-1. Open repository settings.
-2. Open Pages.
-3. Select `Deploy from a branch`.
-4. Select the `main` branch and `/(root)` folder.
-5. Save and wait for the deployment to finish.
-
-Install the hosted application with:
+Open this address in a browser:
 
 ```text
 alt1://addapp/https://trulyboredadventure.github.io/Sus-Alert-Updated/appconfig.json
 ```
 
-When replacing an older installation, remove the old Alt1 app entry and install it again so Alt1 refreshes the application name, icon, configuration, and cached files.
+Approve the app in Alt1. When updating from an older version, remove the old SusAlert Updated entry and install it again.
 
-## Repository upload
+## Requirements
 
-Upload every file and folder from this package into the root of the repository. Do not upload the outer extracted folder as another nested directory.
+- RuneScape interface scaling set to 100 percent.
+- The boss timer visible and unobstructed.
+- Game messages enabled.
+- Chat text size of at least 12.
+- Local chat timestamps recommended.
+- Interface transparency set to 0 percent when using statue indicators.
 
-Important folders include:
+## Main features
 
-```text
-.github/
-assets/
-css/
-docs/
-scripts/
-tests/
-tools/
-vendor/
-```
+### Encounter alerts
 
-## Usage
+- Automatic Croesus encounter start and end detection.
+- Upcoming and incoming special alerts.
+- Optional countdown sounds.
+- Manual timer correction.
+- Middle fungus timer resynchronisation.
+- Statue restoration indicators.
+- Crystal Mask status and expiry alerts.
+
+### Next-special game overlay
+
+The game overlay shows only the information needed during the encounter:
+
+- A compact special icon.
+- The next special name.
+- A live countdown.
+- Urgency colours as the countdown approaches zero.
+
+The overlay supports small, medium, and large sizes. Its position and size are saved on the current device.
+
+![Next-special overlay preview](assets/overlay-preview.png)
+
+### Party route tracker
+
+- Party sizes of 2, 4, or 8 players.
+- Team-size-based roles.
+- Separate short-runner and long-runner roles for eight-player teams.
+- Material and rotten fungus counters.
+- Remaining gather and delivery totals.
+- Current plot and next destination.
+- Instructions for gathering, clearing, depositing, withdrawing, moving, poisoning, restoring, and praying.
+- Rotten fungus responsibility selection.
+- Previous-step undo.
+- Collapsible tracker panel.
+- Automatic reset with the encounter.
+- Recovery of a recently interrupted active encounter.
+
+## Set up the next-special overlay
 
 1. Open SusAlert Updated in Alt1.
-2. Confirm that the app reports that it is looking for or has found the chat box.
-3. Select the party size, role, and rotten fungus duty.
+2. Open Settings from the main app window.
+3. Find the Game overlay section.
+4. Set Next special to Enabled.
+5. Select Small, Medium, or Large.
+
+The Display preview shows how the overlay will look before it is placed in RuneScape.
+
+### Place it with the pointer
+
+1. Select Move.
+2. Move the pointer to the preferred position inside the RuneScape window.
+3. Return to Settings.
+4. Select Set.
+
+Select Cancel to keep the previous position.
+
+### Set an exact location
+
+Enter the X and Y position under Location in game, then select Save.
+
+- X controls the distance from the left edge of the RuneScape window.
+- Y controls the distance from the top edge of the RuneScape window.
+
+Select Show in game to display a six-second sample. Select Reset to restore the default position.
+
+The saved position follows the RuneScape window when it moves.
+
+## Use the route tracker
+
+1. Select the party size.
+2. Select your role.
+3. Select the rotten fungus responsibility when applicable.
 4. Enter the Croesus encounter normally.
-5. Complete each route action in RuneScape, then confirm that action in the route tracker.
-6. Correct counters with the plus and minus controls when needed.
-7. Use `Previous step` to undo the latest route action.
+5. Complete each action in RuneScape.
+6. Confirm the completed action in the tracker.
+7. Use the plus and minus controls to correct a counter when needed.
+8. Use Previous step to undo the most recent route action.
 
-### Next-special overlay
+The tracker does not read the inventory. Automatic counter changes are based on the actions confirmed by the player.
 
-1. Open SusAlert settings.
-2. Set `Next special` to `Enabled`.
-3. Choose the overlay size.
-4. Select `Move`.
-5. Move the pointer to the desired RuneScape position.
-6. Return to settings and select `Set`.
+## Settings
 
-Use `Preview` to show the overlay for six seconds without starting an encounter. Use `Reset` to return it to the default position. The overlay shows one compact pictogram, the special name, and the remaining seconds. It follows the existing SusAlert timer adjustments, core pauses, and middle-fungus resynchronisation.
+Settings are saved locally on the current device. Available options include:
 
-The route tracker does not read inventory contents. Its automatic counter changes are based on the expected result of each action confirmed by the player.
+- Selected chat box.
+- Cursor tooltip details.
+- Countdown text style.
+- Countdown sound.
+- Compact mode.
+- Statue indicators.
+- Crystal Mask indicators, borders, and sounds.
+- Next-special overlay visibility, size, preview, and position.
+- Encounter timing adjustments.
 
-## Local storage
+## Troubleshooting
 
-Route tracker state is stored under:
+### The app cannot find the boss timer
 
-```text
-susAlert.routeTracker.v1
-```
+- Confirm the RuneScape interface scale is 100 percent.
+- Keep the boss timer visible and unobstructed.
+- Reopen the app after changing the interface layout.
 
-Existing SusAlert settings use their original `sus...` local-storage keys. The next-special overlay uses `susSpecialOverlayEnabled`, `susSpecialOverlaySize`, `susSpecialOverlayX`, and `susSpecialOverlayY`. No route or encounter state is transmitted to an external server by project code.
+### The app cannot find chat
 
-## Read-only boundary
+- Enable game messages.
+- Increase chat text size to at least 12.
+- Open Settings and select the correct detected chat box.
+- Enable local chat timestamps when possible.
 
-The application reads permitted screen pixels and game-state information, displays guidance, and stores settings locally. It does not:
+### The game overlay is not visible
+
+- Confirm Next special is Enabled.
+- Select Show in game from Settings.
+- Select Reset if the saved position may be outside the visible game area.
+- Confirm Alt1 granted the overlay permission.
+- Remove and reinstall the app after a major update.
+
+### The overlay is in the wrong place
+
+Use Move and Set for pointer placement, or enter new X and Y values and select Save.
+
+### Counters do not match the inventory
+
+Use the plus and minus controls. The tracker follows confirmed route actions and does not inspect inventory contents.
+
+## Privacy and read-only operation
+
+SusAlert Updated stores settings and active route progress locally. Project code does not send route or encounter state to an external server.
+
+The app does not:
 
 - Click or move the RuneScape client mouse.
 - Send keyboard input to RuneScape.
@@ -142,53 +166,12 @@ The application reads permitted screen pixels and game-state information, displa
 - Alter game packets.
 - Perform gameplay actions for the player.
 
-During placement only, the app reads Alt1's current in-game pointer position. It uses that read-only information to preview the selected location and never sends an input event.
+During overlay placement, the app only reads the current in-game pointer position so it can display the selected location.
 
-The Alt1 permission declaration remains:
+The Alt1 permissions are:
 
 ```text
 pixel,gamestate,overlay
-```
-
-## Testing
-
-Run all static and automated checks with a current Node.js installation:
-
-```bash
-npm run check
-```
-
-Run only automated tests:
-
-```bash
-npm test
-```
-
-Run only repository verification:
-
-```bash
-npm run verify
-```
-
-The checks cover route progression, counter totals, undo, persistence, interrupted-run recovery, encounter hooks, next-special timing, overlay drawing, placement controls, local asset references, app configurations, duplicate element IDs, script syntax, read-only boundaries, and absence of the old remote loader.
-
-## Project structure
-
-```text
-assets/                 Local icon, interface images, statue images, and sounds
-css/style.css           Main encounter and settings styles
-css/tracker.css         Responsive route tracker styles
-docs/                   Design, compliance, audit, and release notes
-scripts/script.js       Local standalone encounter module
-scripts/settings.js     Settings-window integration
-scripts/special-overlay.js Movable next-special game overlay
-scripts/tracker-core.js Route definitions and state model
-scripts/tracker.js      Route tracker UI and encounter lifecycle hooks
-tests/                  Automated tests and layout evidence
-tools/verify-update.js  Repository and standalone-runtime audit
-vendor/alt1/            Local Alt1 browser reader builds
-appconfig*.json         Alt1 application configurations
-index.html              Main application page
 ```
 
 ## Credits
@@ -197,8 +180,8 @@ Original SusAlert was created by Raphire and released under the MIT License.
 
 The original project credits ZeroGwafa for chat detection work and Skillbert for creating Alt1 and assisting with boss timer detection.
 
-The route tracker, responsive layout, persistence, recovery, tests, and standalone packaging were added for SusAlert Updated. See `NOTICE.md` and `THIRD_PARTY_NOTICES.md`.
+SusAlert Updated retains the original credit and license. Additional attribution is available in `NOTICE.md` and `THIRD_PARTY_NOTICES.md`.
 
 ## License
 
-Project code derived from SusAlert is distributed under the MIT License. See `LICENSE` for the complete text. Third-party files in `vendor/` remain subject to their own notices and terms.
+SusAlert Updated is distributed under the MIT License. See `LICENSE` for the complete license text.

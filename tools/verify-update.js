@@ -23,7 +23,7 @@ const required = [
   'scripts/tracker-core.js', 'scripts/tracker.js', 'vendor/alt1/base.js', 'vendor/alt1/ocr.js',
   'vendor/alt1/chatbox.js', 'vendor/alt1/buffs.js', 'vendor/alt1/bosstimer.js',
   'assets/favicon.png', 'assets/crystalmask.png', 'assets/settingsbutton.png',
-  'assets/infobutton.png'
+  'assets/infobutton.png', 'assets/overlay-preview.png'
 ];
 required.forEach((file) => exists(file) ? pass(`required file: ${file}`) : fail(`missing required file: ${file}`));
 
@@ -91,7 +91,7 @@ for (const file of ['appconfig.json', 'appconfig_compact.json', 'appconfig_statu
 if (!failures.some((item) => item.includes('appconfig'))) pass('Alt1 configurations are valid');
 
 const pngFiles = [
-  'assets/favicon.png', 'assets/crystalmask.png', 'assets/settingsbutton.png', 'assets/infobutton.png',
+  'assets/favicon.png', 'assets/crystalmask.png', 'assets/settingsbutton.png', 'assets/infobutton.png', 'assets/overlay-preview.png',
   ...fs.readdirSync(path.join(root, 'assets/statues')).map((name) => `assets/statues/${name}`)
 ];
 for (const file of pngFiles) {
@@ -124,8 +124,14 @@ const runtimeText = runtimeProjectFiles.filter(exists).map(read).join('\n');
 if (runtimeText.includes('\uFFFD')) fail('replacement-character glyph found in runtime text');
 else pass('runtime text contains no replacement glyphs');
 
+const readme = exists('README.md') ? read('README.md') : '';
+if (!readme.includes('alt1://addapp/https://trulyboredadventure.github.io/Sus-Alert-Updated/appconfig.json')) fail('README is missing the end-user install link');
+if (!readme.includes('![Next-special overlay preview](assets/overlay-preview.png)')) fail('README is missing the overlay preview image');
+if (/## Repository upload|npm run check|tools\/verify-update\.js/.test(readme)) fail('README still contains maintainer-focused instructions');
+if (!failures.some((item) => item.includes('README'))) pass('README is end-user focused and includes the overlay preview');
+
 const settingsHtml = exists('settings.html') ? read('settings.html') : '';
-for (const id of ['specialOverlaySelect', 'specialOverlaySizeSelect', 'moveSpecialOverlayButton', 'previewSpecialOverlayButton', 'resetSpecialOverlayButton', 'specialOverlayStatus']) {
+for (const id of ['specialOverlaySelect', 'specialOverlaySizeSelect', 'specialOverlayPreview', 'specialOverlayXInput', 'specialOverlayYInput', 'saveSpecialOverlayPositionButton', 'moveSpecialOverlayButton', 'previewSpecialOverlayButton', 'resetSpecialOverlayButton', 'specialOverlayStatus']) {
   if (!settingsHtml.includes(`id="${id}"`)) fail(`settings.html is missing ${id}`);
 }
 if (!failures.some((item) => item.includes('settings.html is missing'))) pass('next-special overlay settings controls are present');
@@ -135,7 +141,7 @@ if (!encounterSource.includes('root.getEncounterOverlayState = getEncounterOverl
 else pass('encounter module exports next-special timing state');
 
 const overlaySource = exists('scripts/special-overlay.js') ? read('scripts/special-overlay.js') : '';
-for (const apiName of ['startSpecialOverlayPlacement', 'finishSpecialOverlayPlacement', 'cancelSpecialOverlayPlacement', 'resetSpecialOverlayPosition', 'previewSpecialOverlay']) {
+for (const apiName of ['startSpecialOverlayPlacement', 'finishSpecialOverlayPlacement', 'cancelSpecialOverlayPlacement', 'setSpecialOverlayPosition', 'resetSpecialOverlayPosition', 'previewSpecialOverlay']) {
   if (!overlaySource.includes(`root.${apiName}`)) fail(`special overlay is missing ${apiName}`);
 }
 if (!failures.some((item) => item.includes('special overlay is missing'))) pass('special overlay placement and preview API is present');

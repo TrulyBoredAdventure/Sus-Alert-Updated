@@ -252,15 +252,26 @@
     return true;
   }
 
-  function resetPosition() {
+  function setPosition(position, yValue) {
     placement = null;
-    settings.x = DEFAULTS.x;
-    settings.y = DEFAULTS.y;
+    const requested = (position && typeof position === "object")
+      ? position
+      : { x: position, y: yValue };
+    const width = root && root.alt1 ? root.alt1.rsWidth : 4096;
+    const height = root && root.alt1 ? root.alt1.rsHeight : 2160;
+    const next = clampPosition(requested, width, height, settings.size);
+    settings.x = next.x;
+    settings.y = next.y;
+    settings.enabled = true;
     saveSettings();
     previewUntil = Date.now() + 5000;
     notifyPlacementChange();
     drawFrame();
     return getSettings();
+  }
+
+  function resetPosition() {
+    return setPosition({ x: DEFAULTS.x, y: DEFAULTS.y });
   }
 
   function preview(milliseconds) {
@@ -315,6 +326,7 @@
     startPlacement,
     finishPlacement,
     cancelPlacement,
+    setPosition,
     resetPosition,
     preview,
     clearOverlay,
@@ -329,6 +341,7 @@
     root.startSpecialOverlayPlacement = startPlacement;
     root.finishSpecialOverlayPlacement = finishPlacement;
     root.cancelSpecialOverlayPlacement = cancelPlacement;
+    root.setSpecialOverlayPosition = setPosition;
     root.resetSpecialOverlayPosition = resetPosition;
     root.previewSpecialOverlay = preview;
   }
