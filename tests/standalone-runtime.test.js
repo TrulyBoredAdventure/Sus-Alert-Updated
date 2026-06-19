@@ -19,6 +19,7 @@ test('main page loads all runtime scripts locally and in dependency order', () =
     './vendor/alt1/buffs.js',
     './vendor/alt1/bosstimer.js',
     './scripts/script.js',
+    './scripts/special-overlay.js',
     './scripts/tracker-core.js',
     './scripts/tracker.js'
   ]);

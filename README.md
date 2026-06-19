@@ -1,6 +1,6 @@
 # SusAlert Updated
 
-SusAlert Updated is a standalone, read-only Alt1 Toolkit application for the Croesus encounter in RuneScape 3. It preserves the encounter alert workflow associated with SusAlert and adds party route guidance, material tracking, rotten fungus tracking, local persistence, reset integration, and interrupted-run recovery.
+SusAlert Updated is a standalone, read-only Alt1 Toolkit application for the Croesus encounter in RuneScape 3. It preserves the encounter alert workflow associated with SusAlert and adds party route guidance, a movable in-game next-special countdown, material tracking, rotten fungus tracking, local persistence, reset integration, and interrupted-run recovery.
 
 All SusAlert-specific runtime scripts, images, sounds, and Alt1 reader bundles needed by this repository are stored locally. The application does not download or evaluate code from the original SusAlert GitHub Pages deployment.
 
@@ -11,6 +11,9 @@ All SusAlert-specific runtime scripts, images, sounds, and Alt1 reader bundles n
 - Automatic detection of the Croesus boss timer.
 - Automatic encounter start and end handling.
 - Croesus attack countdowns and visual instructions.
+- Movable in-game next-special overlay with a live countdown and compact ASCII pictograms.
+- Small, medium, and large overlay sizes.
+- Saved overlay position, visibility, and size.
 - Optional countdown sounds.
 - Manual timer adjustment.
 - Middle fungus timer resynchronisation.
@@ -78,16 +81,43 @@ alt1://addapp/https://trulyboredadventure.github.io/Sus-Alert-Updated/appconfig.
 
 When replacing an older installation, remove the old Alt1 app entry and install it again so Alt1 refreshes the application name, icon, configuration, and cached files.
 
+## Repository upload
+
+Upload every file and folder from this package into the root of the repository. Do not upload the outer extracted folder as another nested directory.
+
+Important folders include:
+
+```text
+.github/
+assets/
+css/
+docs/
+scripts/
+tests/
+tools/
+vendor/
+```
 
 ## Usage
 
 1. Open SusAlert Updated in Alt1.
-2. Confirm that the overlay reports that it is looking for or has found the chat box.
+2. Confirm that the app reports that it is looking for or has found the chat box.
 3. Select the party size, role, and rotten fungus duty.
 4. Enter the Croesus encounter normally.
 5. Complete each route action in RuneScape, then confirm that action in the route tracker.
 6. Correct counters with the plus and minus controls when needed.
 7. Use `Previous step` to undo the latest route action.
+
+### Next-special overlay
+
+1. Open SusAlert settings.
+2. Set `Next special` to `Enabled`.
+3. Choose the overlay size.
+4. Select `Move`.
+5. Move the pointer to the desired RuneScape position.
+6. Return to settings and select `Set`.
+
+Use `Preview` to show the overlay for six seconds without starting an encounter. Use `Reset` to return it to the default position. The overlay shows one compact pictogram, the special name, and the remaining seconds. It follows the existing SusAlert timer adjustments, core pauses, and middle-fungus resynchronisation.
 
 The route tracker does not read inventory contents. Its automatic counter changes are based on the expected result of each action confirmed by the player.
 
@@ -99,7 +129,7 @@ Route tracker state is stored under:
 susAlert.routeTracker.v1
 ```
 
-Existing SusAlert settings use their original `sus...` local-storage keys. No route or encounter state is transmitted to an external server by project code.
+Existing SusAlert settings use their original `sus...` local-storage keys. The next-special overlay uses `susSpecialOverlayEnabled`, `susSpecialOverlaySize`, `susSpecialOverlayX`, and `susSpecialOverlayY`. No route or encounter state is transmitted to an external server by project code.
 
 ## Read-only boundary
 
@@ -111,6 +141,8 @@ The application reads permitted screen pixels and game-state information, displa
 - Read or modify RuneScape process memory.
 - Alter game packets.
 - Perform gameplay actions for the player.
+
+During placement only, the app reads Alt1's current in-game pointer position. It uses that read-only information to preview the selected location and never sends an input event.
 
 The Alt1 permission declaration remains:
 
@@ -138,7 +170,7 @@ Run only repository verification:
 npm run verify
 ```
 
-The checks cover route progression, counter totals, undo, persistence, interrupted-run recovery, encounter hooks, local asset references, app configurations, duplicate element IDs, script syntax, read-only boundaries, and absence of the old remote loader.
+The checks cover route progression, counter totals, undo, persistence, interrupted-run recovery, encounter hooks, next-special timing, overlay drawing, placement controls, local asset references, app configurations, duplicate element IDs, script syntax, read-only boundaries, and absence of the old remote loader.
 
 ## Project structure
 
@@ -149,6 +181,7 @@ css/tracker.css         Responsive route tracker styles
 docs/                   Design, compliance, audit, and release notes
 scripts/script.js       Local standalone encounter module
 scripts/settings.js     Settings-window integration
+scripts/special-overlay.js Movable next-special game overlay
 scripts/tracker-core.js Route definitions and state model
 scripts/tracker.js      Route tracker UI and encounter lifecycle hooks
 tests/                  Automated tests and layout evidence

@@ -64,7 +64,22 @@
     111: ["Slimes", "Evade"],
     123: ["Blue bomb", "Move"],
     135: ["Stun", "Use Anticipation"],
-    144: ["Middle energy fungus", "Go to the middle"]
+    144: ["Middle fungus", "Go middle"]
+  };
+
+  const attackOverlayMeta = {
+    15: { id: "red-bomb", icon: "*", color: [255, 72, 72] },
+    27: { id: "fairy-ring", icon: "O", color: [115, 224, 255] },
+    39: { id: "slimes", icon: "~", color: [105, 232, 126] },
+    51: { id: "yellow-bomb", icon: "*", color: [255, 225, 76] },
+    63: { id: "stun", icon: "!", color: [255, 166, 61] },
+    72: { id: "sticky-fungi", icon: "#", color: [198, 133, 255] },
+    87: { id: "green-bomb", icon: "*", color: [87, 232, 108] },
+    99: { id: "fairy-ring", icon: "O", color: [115, 224, 255] },
+    111: { id: "slimes", icon: "~", color: [105, 232, 126] },
+    123: { id: "blue-bomb", icon: "*", color: [92, 158, 255] },
+    135: { id: "stun", icon: "!", color: [255, 166, 61] },
+    144: { id: "middle-fungus", icon: "M", color: [255, 116, 214] }
   };
 
   const countdownColors = {
@@ -413,6 +428,72 @@
     if (byId("recalButton")) byId("recalButton").classList.add("d-none");
   }
 
+  function getAdjustedEncounterSeconds(now) {
+    const currentTime = Number.isFinite(Number(now)) ? Number(now) : Date.now();
+    const milliseconds = Math.max(0, currentTime - startDate);
+    const activeCorePause = isAttackable ? Math.max(0, currentTime - attackStartDate) / 1000 : 0;
+    return Math.max(0, milliseconds / 1000 - attackOffset - activeCorePause - recalOffset);
+  }
+
+  function getCyclePhase(adjusted) {
+    const cycle = 147 + midOffset;
+    let phase = Math.max(0, Number(adjusted) || 0);
+    if (phase >= 143 + midOffset) phase %= cycle;
+    return { phase, cycle };
+  }
+
+  function getEncounterOverlayState(now) {
+    if (isPaused) {
+      return { active: false, paused: true, core: false, countdown: null, special: null };
+    }
+
+    const adjusted = getAdjustedEncounterSeconds(now);
+    const cycleState = getCyclePhase(adjusted);
+    const phase = cycleState.phase;
+    const cycle = cycleState.cycle;
+    const keys = Object.keys(attacks).map(Number).sort((a, b) => a - b);
+    let selectedKey = keys[0];
+    let countdown = 0;
+
+    for (let index = 0; index < keys.length; index += 1) {
+      const key = keys[index];
+      const activeWindow = index === keys.length - 1 ? 7 : 3;
+      if (phase >= key && phase < key + activeWindow) {
+        selectedKey = key;
+        countdown = 0;
+        break;
+      }
+      if (phase < key) {
+        selectedKey = key;
+        countdown = Math.max(0, Math.ceil(key - phase));
+        break;
+      }
+      if (index === keys.length - 1) {
+        selectedKey = keys[0];
+        countdown = Math.max(0, Math.ceil(cycle - phase + keys[0]));
+      }
+    }
+
+    const attack = attacks[selectedKey];
+    const meta = attackOverlayMeta[selectedKey] || { id: "special", icon: "!", color: [255, 255, 255] };
+    return {
+      active: true,
+      paused: false,
+      core: isAttackable,
+      countdown,
+      phase,
+      cycle,
+      special: {
+        time: selectedKey,
+        id: meta.id,
+        icon: meta.icon,
+        color: meta.color.slice(),
+        name: attack[0],
+        hint: attack[1]
+      }
+    };
+  }
+
   function calculateTimeAndUpdateUI() {
     if (isPaused) return;
     const milliseconds = Math.max(0, Date.now() - startDate);
@@ -420,13 +501,8 @@
     const seconds = Math.floor(milliseconds / 1000) % 60;
     message(String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0"), "timerBox");
 
-    let adjusted = milliseconds / 1000 - attackOffset - recalOffset;
-    if (adjusted >= 143 + midOffset) {
-      const cycle = 147 + midOffset;
-      const original = adjusted;
-      adjusted %= cycle;
-      if (adjusted < 0) adjusted = original - recalOffset;
-    }
+    const adjustedState = getCyclePhase(getAdjustedEncounterSeconds());
+    const adjusted = adjustedState.phase;
     if (isAttackable) return;
 
     const keys = Object.keys(attacks).map(Number);
@@ -702,6 +778,7 @@
   root.calculateTimeAndUpdateUI = calculateTimeAndUpdateUI;
   root.nudgeTimer = nudgeTimer;
   root.getChatReader = getChatReader;
+  root.getEncounterOverlayState = getEncounterOverlayState;
   root.updateChatSetting = updateChatSetting;
   root.updateTooltipSetting = updateTooltipSetting;
   root.updateStyleSetting = updateStyleSetting;

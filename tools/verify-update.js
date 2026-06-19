@@ -19,8 +19,8 @@ const required = [
   'NOTICE.md', 'THIRD_PARTY_NOTICES.md', 'package.json',
   'appconfig.json', 'appconfig_compact.json', 'appconfig_statues.json',
   'appconfig_statues_compact.json', 'css/style.css', 'css/tracker.css',
-  'scripts/script.js', 'scripts/settings.js', 'scripts/tracker-core.js',
-  'scripts/tracker.js', 'vendor/alt1/base.js', 'vendor/alt1/ocr.js',
+  'scripts/script.js', 'scripts/settings.js', 'scripts/special-overlay.js',
+  'scripts/tracker-core.js', 'scripts/tracker.js', 'vendor/alt1/base.js', 'vendor/alt1/ocr.js',
   'vendor/alt1/chatbox.js', 'vendor/alt1/buffs.js', 'vendor/alt1/bosstimer.js',
   'assets/favicon.png', 'assets/crystalmask.png', 'assets/settingsbutton.png',
   'assets/infobutton.png'
@@ -32,7 +32,7 @@ else pass('remote legacy loader is absent');
 
 const runtimeProjectFiles = [
   'index.html', 'settings.html', 'css/style.css', 'css/tracker.css',
-  'scripts/script.js', 'scripts/settings.js', 'scripts/tracker-core.js', 'scripts/tracker.js',
+  'scripts/script.js', 'scripts/settings.js', 'scripts/special-overlay.js', 'scripts/tracker-core.js', 'scripts/tracker.js',
   'appconfig.json', 'appconfig_compact.json', 'appconfig_statues.json', 'appconfig_statues_compact.json'
 ];
 const forbiddenRemote = /(?:raphire\.github\.io|raw\.githubusercontent\.com\/Raphire|github\.com\/Raphire\/SusAlert|unpkg\.com\/alt1|stackpath\.bootstrapcdn\.com|runeapps\.org\/runeappslib)/i;
@@ -47,7 +47,7 @@ const index = exists('index.html') ? read('index.html') : '';
 const expectedScripts = [
   './vendor/alt1/base.js', './vendor/alt1/ocr.js', './vendor/alt1/chatbox.js',
   './vendor/alt1/buffs.js', './vendor/alt1/bosstimer.js', './scripts/script.js',
-  './scripts/tracker-core.js', './scripts/tracker.js'
+  './scripts/special-overlay.js', './scripts/tracker-core.js', './scripts/tracker.js'
 ];
 const actualScripts = [...index.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/gi)].map((match) => match[1]);
 if (JSON.stringify(actualScripts) === JSON.stringify(expectedScripts)) pass('runtime script order is correct');
@@ -108,7 +108,7 @@ for (const name of requiredSounds) {
 }
 if (!failures.some((item) => item.includes('sound'))) pass('local sound assets are present');
 
-const projectScripts = ['scripts/script.js', 'scripts/settings.js', 'scripts/tracker-core.js', 'scripts/tracker.js'];
+const projectScripts = ['scripts/script.js', 'scripts/settings.js', 'scripts/special-overlay.js', 'scripts/tracker-core.js', 'scripts/tracker.js'];
 for (const file of projectScripts) {
   if (!exists(file)) continue;
   const source = read(file);
@@ -123,6 +123,22 @@ if (!failures.some((item) => /syntax error|dynamic code|network request|send inp
 const runtimeText = runtimeProjectFiles.filter(exists).map(read).join('\n');
 if (runtimeText.includes('\uFFFD')) fail('replacement-character glyph found in runtime text');
 else pass('runtime text contains no replacement glyphs');
+
+const settingsHtml = exists('settings.html') ? read('settings.html') : '';
+for (const id of ['specialOverlaySelect', 'specialOverlaySizeSelect', 'moveSpecialOverlayButton', 'previewSpecialOverlayButton', 'resetSpecialOverlayButton', 'specialOverlayStatus']) {
+  if (!settingsHtml.includes(`id="${id}"`)) fail(`settings.html is missing ${id}`);
+}
+if (!failures.some((item) => item.includes('settings.html is missing'))) pass('next-special overlay settings controls are present');
+
+const encounterSource = exists('scripts/script.js') ? read('scripts/script.js') : '';
+if (!encounterSource.includes('root.getEncounterOverlayState = getEncounterOverlayState')) fail('encounter module does not export overlay timing state');
+else pass('encounter module exports next-special timing state');
+
+const overlaySource = exists('scripts/special-overlay.js') ? read('scripts/special-overlay.js') : '';
+for (const apiName of ['startSpecialOverlayPlacement', 'finishSpecialOverlayPlacement', 'cancelSpecialOverlayPlacement', 'resetSpecialOverlayPosition', 'previewSpecialOverlay']) {
+  if (!overlaySource.includes(`root.${apiName}`)) fail(`special overlay is missing ${apiName}`);
+}
+if (!failures.some((item) => item.includes('special overlay is missing'))) pass('special overlay placement and preview API is present');
 
 const trackerCore = require(path.join(root, 'scripts/tracker-core.js'));
 for (const size of [2, 4, 8]) {

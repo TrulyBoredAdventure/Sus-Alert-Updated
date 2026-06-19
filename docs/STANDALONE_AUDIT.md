@@ -2,7 +2,7 @@
 
 ## Result
 
-The application no longer uses the remote encounter loader and does not request scripts, styles, images, or sounds from the original SusAlert deployment.
+The application does not use the remote encounter loader and does not request scripts, styles, images, or sounds from the original SusAlert deployment.
 
 ## Local runtime chain
 
@@ -14,10 +14,15 @@ The application no longer uses the remote encounter loader and does not request 
 4. `vendor/alt1/buffs.js`
 5. `vendor/alt1/bosstimer.js`
 6. `scripts/script.js`
-7. `scripts/tracker-core.js`
-8. `scripts/tracker.js`
+7. `scripts/special-overlay.js`
+8. `scripts/tracker-core.js`
+9. `scripts/tracker.js`
 
 All interface images, statue images, Crystal Mask assets, and alert sounds use relative local paths.
+
+## Next-special overlay
+
+The special overlay reads timing state from the local encounter module. Its position, size, and visibility are stored locally. Placement reads the current RuneScape-relative pointer position through Alt1 and does not send mouse or keyboard input.
 
 ## Removed failure path
 

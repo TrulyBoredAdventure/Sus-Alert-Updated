@@ -1,6 +1,6 @@
 {
   "appName": "SusAlert Updated",
-  "description": "Standalone read-only Croesus attack alerts, party routes, materials, rotten fungus, and destination guidance.",
+  "description": "Standalone Croesus alerts with a movable next-special countdown, party routes, materials, rotten fungus, and destination guidance.",
   "appUrl": "./index.html",
   "iconUrl": "./assets/favicon.png",
   "requestHandlers": [],

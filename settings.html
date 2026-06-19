@@ -11,56 +11,70 @@
 <body class="nis body settings-page">
   <h1>SusAlert settings</h1>
   <div class="settings-grid">
-    <label for="chatSelect">Selected chat box</label>
-    <select id="chatSelect"></select>
+    <div class="setting-line">
+      <label for="chatSelect">Selected chat box</label>
+      <select id="chatSelect"></select>
+    </div>
 
-    <label for="tooltipSelect">Cursor tooltip</label>
-    <select id="tooltipSelect">
-      <option value="0">Disabled</option>
-      <option value="1">Attack only</option>
-      <option value="2">Hint only</option>
-      <option value="3">Attack and hint</option>
-    </select>
+    <div class="setting-line">
+      <label for="tooltipSelect">Cursor tooltip</label>
+      <select id="tooltipSelect">
+        <option value="0">Disabled</option>
+        <option value="1">Attack only</option>
+        <option value="2">Hint only</option>
+        <option value="3">Attack and hint</option>
+      </select>
+    </div>
 
-    <label for="styleSelect">Countdown text style</label>
-    <select id="styleSelect">
-      <option value="0">Default white</option>
-      <option value="1">Colourful</option>
-      <option value="2">Colourful, inverted</option>
-    </select>
+    <div class="setting-line">
+      <label for="styleSelect">Countdown text style</label>
+      <select id="styleSelect">
+        <option value="0">Default white</option>
+        <option value="1">Colourful</option>
+        <option value="2">Colourful, inverted</option>
+      </select>
+    </div>
 
-    <label for="countdownSoundSelect">Countdown sound</label>
-    <select id="countdownSoundSelect">
-      <option value="0">Disabled</option>
-      <option value="1">Beep</option>
-      <option value="2">Race countdown</option>
-      <option value="3">Soft beep</option>
-      <option value="4">Xylophone</option>
-      <option value="69">Warning</option>
-    </select>
+    <div class="setting-line">
+      <label for="countdownSoundSelect">Countdown sound</label>
+      <select id="countdownSoundSelect">
+        <option value="0">Disabled</option>
+        <option value="1">Beep</option>
+        <option value="2">Race countdown</option>
+        <option value="3">Soft beep</option>
+        <option value="4">Xylophone</option>
+        <option value="69">Warning</option>
+      </select>
+    </div>
 
     <div class="settings-section-title">Interface</div>
 
-    <label for="compactModeSelect">Compact mode</label>
-    <select id="compactModeSelect">
-      <option value="1">Disabled</option>
-      <option value="0">Enabled</option>
-    </select>
+    <div class="setting-line">
+      <label for="compactModeSelect">Compact mode</label>
+      <select id="compactModeSelect">
+        <option value="1">Disabled</option>
+        <option value="0">Enabled</option>
+      </select>
+    </div>
 
-    <label for="extendedModeSelect">Statue indicator</label>
-    <select id="extendedModeSelect">
-      <option value="1">Disabled</option>
-      <option value="0">Enabled</option>
-    </select>
+    <div class="setting-line">
+      <label for="extendedModeSelect">Statue indicator</label>
+      <select id="extendedModeSelect">
+        <option value="1">Disabled</option>
+        <option value="0">Enabled</option>
+      </select>
+    </div>
 
-    <label for="crystalMaskSelect">Crystal Mask indicator</label>
-    <select id="crystalMaskSelect">
-      <option value="0">Disabled</option>
-      <option value="1">Enabled</option>
-    </select>
+    <div class="setting-line">
+      <label for="crystalMaskSelect">Crystal Mask indicator</label>
+      <select id="crystalMaskSelect">
+        <option value="0">Disabled</option>
+        <option value="1">Enabled</option>
+      </select>
+    </div>
 
-    <div class="setting-row"><label for="crystalMaskBorderSelect">Crystal Mask border</label></div>
-    <div class="setting-row">
+    <div class="setting-line setting-row">
+      <label for="crystalMaskBorderSelect">Crystal Mask border</label>
       <select id="crystalMaskBorderSelect">
         <option value="0">Disabled</option>
         <option value="1">Green and red</option>
@@ -71,8 +85,8 @@
       </select>
     </div>
 
-    <div class="setting-row"><label for="crystalMaskSoundSelect">Crystal Mask sound</label></div>
-    <div class="setting-row">
+    <div class="setting-line setting-row">
+      <label for="crystalMaskSoundSelect">Crystal Mask sound</label>
       <select id="crystalMaskSoundSelect">
         <option value="0">Disabled</option>
         <option value="1">Shatter 1</option>
@@ -86,16 +100,49 @@
       </select>
     </div>
 
+    <div class="settings-section-title">Game overlay</div>
+
+    <div class="setting-line">
+      <label for="specialOverlaySelect">Next special</label>
+      <select id="specialOverlaySelect">
+        <option value="1">Enabled</option>
+        <option value="0">Disabled</option>
+      </select>
+    </div>
+
+    <div class="setting-line">
+      <label for="specialOverlaySizeSelect">Overlay size</label>
+      <select id="specialOverlaySizeSelect">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+    </div>
+
+    <div class="overlay-setting-actions" aria-label="Next special overlay controls">
+      <button id="moveSpecialOverlayButton" type="button" class="nisbutton">Move</button>
+      <button id="previewSpecialOverlayButton" type="button" class="nisbutton">Preview</button>
+      <button id="resetSpecialOverlayButton" type="button" class="nisbutton">Reset</button>
+      <button id="cancelSpecialOverlayButton" type="button" class="nisbutton d-none">Cancel</button>
+    </div>
+    <div id="specialOverlayStatus" class="overlay-setting-status" role="status">Move, position, then Set.</div>
+
     <div class="settings-section-title">Timing</div>
 
-    <label for="startDelayInput">Start delay in milliseconds</label>
-    <input id="startDelayInput" type="number" min="0" max="2000" step="1">
+    <div class="setting-line">
+      <label for="startDelayInput">Start delay in milliseconds</label>
+      <input id="startDelayInput" type="number" min="0" max="2000" step="1">
+    </div>
 
-    <label for="endDelayInput">End check time in ticks</label>
-    <input id="endDelayInput" type="number" min="6" max="20" step="1">
+    <div class="setting-line">
+      <label for="endDelayInput">End check time in ticks</label>
+      <input id="endDelayInput" type="number" min="6" max="20" step="1">
+    </div>
 
-    <label for="midDelayInput">Delay after the middle fungus in seconds</label>
-    <input id="midDelayInput" type="number" min="5" max="25" step="1">
+    <div class="setting-line">
+      <label for="midDelayInput">Delay after the middle fungus in seconds</label>
+      <input id="midDelayInput" type="number" min="5" max="25" step="1">
+    </div>
   </div>
 
   <p class="settings-note">Changes are saved locally. Keep this window open from the main SusAlert window so changes can be applied immediately.</p>
